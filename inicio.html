@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectángulo Morado</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/s/styles.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .rectangulo-container {
+      position: relative;
+      width: 350px; /* Ancho del "celular" */
+      height: 700px; /* Alto del "celular" */
+    }
+
+    .rectangulo-superior,
+    
+    .rectangulo-inferior {
+      width: 100%;
+      height: 60px; /* Altura de los div morados */
+    }
+    .rectangulo-inferior {
+      width: 100%;
+     
+    }
+    .rectangulo-medio::-webkit-scrollbar {
+      display: none; /* Ocultar el indicador de desplazamiento */
+    }
+    .rectangulo-superior,
+    .rectangulo-inferior {
+      background-color: #6b46c1;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .rectangulo-superior {
+      top: 0;
+    }
+
+    .rectangulo-inferior {
+      bottom: 0;
+      display: flex; 
+      justify-content: center;
+    }
+
+    .rectangulo-medio {
+      position: absolute;
+      top: 60px;
+      bottom: 60px;
+      overflow-y: auto; /* Agregar desplazamiento vertical */
+      scrollbar-width: none;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap; /* Permitir que los productos se envuelvan en múltiples líneas */
+      justify-content: space-between; /
+    }
+ 
+    .producto {
+      width: calc(33.33% - 20px);
+      padding: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .producto img {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen al contenedor */
+      height: auto;
+      border-radius: 5px;
+      width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+      height: 100px; /* Establece una altura fija para todas las imágenes */
+      object-fit: cover; 
+    }
+
+    .producto .nombre {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .producto .precio {
+      margin-top: 5px;
+    }
+
+    .icono {
+      font-size: 18px;
+      color: #3700b6;
+      margin-top: 5px;
+    }
+    .icon-link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .carrito-icon,
+    .buscador-icon {
+      width: 24px;
+      height: 24px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+
+    .carrito-icon i,
+    .buscador-icon i {
+      font-size: 16px;
+      color: #6b46c1;
+    }
+
+    .buscador {
+      flex: 1;
+      height: 20px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+    
+    .categories ul {
+      list-style-type: none; 
+      padding: 0;
+      margin: 0;
+      display: flex; 
+    }
+
+    .categories ul li {
+      margin: 0 10px; 
+      color: white;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="rectangulo-container">
+    <div class="rectangulo-superior">
+      <a href="#" class="icon-link">
+        <div class="buscador-icon"><i class="fas fa-search"></i></div>
+      </a>
+      <input type="text" class="buscador" placeholder="Buscar...">
+      <a href="#" class="icon-link">
+        <div class="carrito-icon"><i class="fas fa-shopping-cart"></i></div>
+      </a>
+    </div>
+    <div class="rectangulo-medio">
+        <div class="producto">
+            <img src="/img/1.jpg" alt="Producto 1">
+            <div class="nombre">funda estrella</div>
+            <div class="precio">$34.99</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/2.jpg " alt="Producto 1">
+            <div class="nombre">funda floreada</div>
+            <div class="precio">$46.55</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/3.jfif" alt="Producto 1">
+            <div class="nombre">funda rosas</div>
+            <div class="precio">$83.5</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/4.webp" alt="Producto 1">
+            <div class="nombre">funda clasica</div>
+            <div class="precio">$67.00</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/6.jfif" alt="Producto 1">
+            <div class="nombre">funda rustica </div>
+            <div class="precio">$70.55</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/9.jpg" alt="Producto 1">
+            <div class="nombre">funda de mar</div>
+            <div class="precio">$50.99</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/images.jfif" alt="Producto 1">
+            <div class="nombre">Producto </div>
+            <div class="precio">$88</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/3.jfif" alt="Producto 1">
+            <div class="nombre">Producto </div>
+            <div class="precio">$56</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+          <div class="producto">
+            <img src="/img/6.jfif" alt="Producto 1">
+            <div class="nombre">Producto </div>
+            <div class="precio">$34</div>
+            <div class="icono"><i class="fas fa-cart-plus"></i></div>
+          </div>
+    
+    
+    </div>
+    <div class="rectangulo-inferior">
+        <section class="categories">
+            <ul>
+                <li>Comprar</li>
+                <li>Categoria</li>
+                <li>Carrito</li>
+            </ul>
+        </section>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    z-index: -1;
+    width: 20vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.contenedor {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    color: #333;
+    overflow-y: auto;
+
+    max-height: 80vh;
+    margin: 0 10%;
+
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campo {
+    background-color: #f7f7f7;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    color: #333;
+
+}
+
+.campo i {
+    margin-bottom: 10px;
+}
+
+.campo input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.boton {
+    background-color: #8e2de2;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.boton:hover {
+    background-color: #7b1fa2;
+}
+
+.enlace {
+    color: #8e2de2;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.enlace:hover {
+    color: #7b1fa2;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.5em;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+
+}
